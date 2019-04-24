@@ -26,8 +26,9 @@ print('7) Scatter plots')
 print('8) Sepal area')
 print('9) Petal area')
 print('10) Data types')
-print('11) Sepal ration')
+print('11) Sepal ratio')
 print('12) Petal ratio')
+print('13) Min, Max, Mean')
 print()
 
 Number = int(input("Please provide a number "))
@@ -63,13 +64,14 @@ elif Number ==7:
 
 elif Number == 8:
     print()
+    iris_ds.drop(columns=['Petal_length', 'Petal_width'], axis=1)
     iris_ds['Sepal_area'] = iris_ds.Sepal_width * iris_ds.Sepal_length
-    print(iris_ds.head(20))
+    print(iris_ds.groupby("Class").agg(["count","min","max","mean"]))
 
 elif Number == 9:
     print()
     iris_ds['Petal_area'] = iris_ds.Petal_width * iris_ds.Petal_length
-    print(iris_ds.head(20))
+    print(iris_ds.groupby("Class").agg(["count","min","max","mean"]))
 
 elif Number == 10:
     print()
@@ -78,16 +80,21 @@ elif Number == 10:
 elif Number == 11:
     print()
     iris_ds['Sepal_ratio'] = iris_ds.Sepal_width / iris_ds.Sepal_length
-    print(iris_ds.head(20))
+    print(iris_ds.groupby("Class").agg(["count","min","max","mean"]))
 
 elif Number == 12:
     print()
     iris_ds['Petal_ratio'] = iris_ds.Petal_width / iris_ds.Petal_length
-    print(iris_ds.head(20))
+    print(iris_ds.groupby("Class").agg(["count","min","max","mean"]))
 
+elif Number == 13:
+    print()
+    print(iris_ds.groupby("Class").agg(["count","min","max","mean"]))
 else:
     pass
 
-# print(pd.crosstab(iris_ds.Petal_width, iris_ds.Petal_length))
-
-print(iris_ds.groupby('Class').agg({'Petal_Length':'mean', 'Petal_width': 'mean'}))
+print(iris_ds.Class.unique())
+print(iris_ds.Class.nunique())
+print(pd.crosstab(iris_ds.Sepal_length,iris_ds.Sepal_width))
+print(pd.crosstab(iris_ds.Petal_length,iris_ds.Petal_width))
+print(iris_ds.head(30))
