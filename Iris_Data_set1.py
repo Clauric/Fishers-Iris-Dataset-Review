@@ -35,121 +35,116 @@ print("1) All data in Fisher's Iris data set")
 print("2) Iris Setosa data set")
 print("3) Iris Versicolor data set")
 print("4) Iris Virginica data set")
-
+print()
 Number = int(input("Please choose data set number "))
+Number_data = Number
 
+# Reassign the individual data sets as the main data set
 if Number == 1:
     iris_df = iris_ds
+    data_set = "entire Iris data set"
 
 elif Number == 2:
     iris_df = iris_SA
+    data_set = "Iris Setsosa data set"
 
 elif Number == 3:
     iris_df = iris_VR
+    data_set = "Iris Veriscolor data set"
 
 elif Number == 4:
     iris_df = iris_VA
+    data_set = "Iris Virginia data set"
+
+else:
+    pass
+
+# Provide choice to use original or modified data set
+print()
+print("Would you like to use the initial data set, or a data set where the petal and sepal lengths and widths have been replaced with the areas and rations of the petal and sepals?")
+print()
+print("Area for petal/sepal = width x length")
+print("Ratio for petal/sepal = length / width")
+print()
+print("1) Original data set")
+print("2) Areas and ratios")
+print()
+Number = int(input("Please choose data set option "))
+
+# Remove petal and sepal lengths and widths
+if Number == 2:
+    iris_df["Sepal_area_(cm^2)"] = iris_df.Sepal_width * iris_df.Sepal_length         # Formula for sepal area
+    iris_df["Sepal_ratio"] = iris_df.Sepal_width / iris_df.Sepal_length               # Formula for sepal ratio
+    iris_df["Petal_area_(cm^2)"] = iris_df.Petal_width * iris_df.Petal_length         # Formula for petal area
+    iris_df["Petal_ratio"] = iris_df.Petal_width / iris_df.Petal_length               # Formula for petal ratio
+    iris_df = iris_df.drop(columns=["Petal_length", "Petal_width"], axis=1)           # Drop petal information from data set
+    iris_df = iris_df.drop(columns=["Sepal_length", "Sepal_width"], axis=1)           # Drop sepal infomration from data set
+    data_set = "modified",data_set
 
 if Number > 0 and Number < 5:
 
     # Choice of activity
     print()
-    print("What facts do you want to find out about the Iris Dataset?")
+    print("What facts do you want to find out about the", data_set, "?")
     print()
-    print("1) Description")
-    print("2) Top 20 rows")
-    print("3) Last 20 rows")
-    print("4) Shape")
-    print("5) Box and whisker plots")
-    print("6) Histogram plots")
-    print("7) Scatter plots")
-    print("8) Sepal area")
-    print("9) Petal area")
-    print("10) Data types")
-    print("11) Sepal ratio")
-    print("12) Petal ratio")
-    print("13) Min, Max, Mean")
-    print("14) Other")
-    print()
+    print("1) Data types and shape")
+    print("2) Top and bottom 10 rows")
+    print("3) Box and whisker plots")
+    print("4) Histogram plots")
+    print("5) Scatter plots")
+    print("6) Standard descriptive statistics")
+    print("7) Min, Mean, Median, Max, Range, Variance, and Standard deviation")
 
+    # Include additional choice if using entire data set
+    if Number_data==1:
+        print("8) Other information")
+    
+    print()
     Number = int(input("Please provide a number "))
 
-    # Print description of the data set.
+    # Print data types
     if Number == 1:
         print()
-        print(iris_df.describe())
-
-    # Print top 20 rows of the data set.
-    elif Number == 2:
-        print()
-        print(iris_df.head(20))
-
-    # Print last 20 rows of the data set.
-    elif Number == 3:
-        print()
-        print(iris_df.tail(20))
-
-    # Print number of rows and cols in the data set.
-    elif Number == 4:
+        print("Data Type")
+        print(iris_df.dtypes)
         print()
         print("Rows,", "Cols")
         print(iris_df.shape)
 
-    # Plot box and whisker of entire data set.
-    elif Number == 5:
+    # Print top 20 rows of the data set.
+    elif Number == 2:
+        print()
+        print(iris_df.head(10))
+        print(iris_df.tail(10))
+
+    # Print box whisker plots.
+    elif Number == 3:
         iris_df.plot(kind="box", subplots = True, layout = (2,2), sharex = False, sharey = False)
         plt.show()
 
     # Plot histogram of entire data set.
-    elif Number == 6:
+    elif Number == 4:
         iris_df.hist()
         plt.show()
 
     # Scatter plot of entire data set.
-    elif Number ==7:
+    elif Number ==5:
         scatter_matrix(iris_df)
         plt.show()
 
-    # Count, min, max, mean of sepals, including area.
-    elif Number == 8:
+    # Print desccription of data set
+    elif Number == 6:
         print()
-        iris_df = iris_df.drop(columns=["Petal_length", "Petal_width"], axis=1)     # Drop petal information from data set
-        iris_df["Sepal_area"] = iris_df.Sepal_width * iris_df.Sepal_length          # Formula for sepal area
-        print(iris_df.groupby("Class").agg(["count","min","max","mean"]))
-
-    # Count, min, max, mean of petals, including area.
-    elif Number == 9:
-        print()
-        iris_df = iris_df.drop(columns=["Sepal_length", "Sepal_width"], axis=1)     # Drop sepal infomration from data set
-        iris_df["Petal_area"] = iris_df.Petal_width * iris_df.Petal_length          # Formula for petal area
-        print(iris_df.groupby("Class").agg(["count","min","max","mean"]))
-
-    # Print data types of data set (by column).
-    elif Number == 10:
-        print()
-        print(iris_df.dtypes)
-
-    # Count, min, max, mean of sepals, including ratio.
-    elif Number == 11:
-        print()
-        iris_df = iris_df.drop(columns=["Petal_length", "Petal_width"], axis=1)     # Drop petal information from data set
-        iris_df["Sepal_ratio"] = iris_df.Sepal_width / iris_df.Sepal_length         # Formula for sepal ratio
-        print(iris_df.groupby("Class").agg(["count","min","max","mean"]))
-
-    # Count, min, max, mean of petals, including ratio.
-    elif Number == 12:
-        print()
-        iris_df = iris_df.drop(columns=["Sepal_length", "Sepal_width"], axis=1)     # Drop sepal information from data set
-        iris_df["Petal_ratio"] = iris_df.Petal_width / iris_df.Petal_length         # Formula for petal ratio
-        print(iris_df.groupby("Class").agg(["count","min","max","mean"]))
-
-    # Count, min, max, mean of petals and sepals.
-    elif Number == 13:
+        print("Descriptive statistics of data set")
+        print(iris_df.describe())
+        
+    # Min, Mean, Median, Max, Range, Variance, and Standard deviation
+    elif Number == 7:
         print()
         print(iris_df.groupby("Class").agg(["count","min","max","mean"]))
-
+        
     # Other printouts.
-    elif Number == 14:
+    elif Number == 8:
         print()
         print(iris_df.Class.unique())                                               # Print names of unique classes (Iris types) in data set
         print()
