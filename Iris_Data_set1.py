@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from tabulate import tabulate as tb
+import numpy as np
 
+from tabulate import tabulate as tb
 from pandas.plotting import scatter_matrix
 
 # Load digits dataset
@@ -142,8 +143,11 @@ if Number > 0 and Number < 5:
             print()
             print(data_name)
             
-            table = ("Sepal_area_(cm^2)",iris_ds.min("Sepal_area_(cm^2)"),iris_ds.mean("Sepal_area_(cm^2)"),"4","3","5","4","3")
-            print(tb(table,headers = ["Field","Min", "Mean", "Median", "Max", "Range", "Variance", "Standard Deviation"]))
+            # table = ("Sepal_area_(cm^2)",iris_ds.min("Sepal_area_(cm^2)"),iris_ds.mean("Sepal_area_(cm^2)"),"4","3","5","4","3")
+            
+            table = ("Sepal Area (cm^2)", iris_ds.loc[:,"Sepal_area_(cm^2)"].min())
+            print(tb(table, headers = ["Field", "Min"]))
+            # print(tb(table,headers = ["Field","Min", "Mean", "Median", "Max", "Range", "Variance", "Standard Deviation"]))
         
         else:
             print("Thank you. Come again")
