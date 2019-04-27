@@ -3,19 +3,32 @@ Introduction:
 This report is aimed at providing an understanding of “Fisher’s” Iris data set. The report is broken down into three main sections:
 
 1)	Fisher’s Iris data set
+
+a.	What is Fisher’s Iris data set?
+  
+b.	Uses of Fisher’s Iris data set
+
 2)	Analysis and results
+
+a.	
+
 3)	Technical information
 
 The 1st section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2nd section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a discussion of any issues that might arise from using this data. The last section will cover the technical information on how the accompanying Python script was used, including the Python packages required, and code used.
 
+Fisher’s Iris data set
+
 What is Fisher’s Iris data set?
 
-The data set known as Fisher’s Iris data set is a collection of measurements compiled by the researcher Edgar Anderson in 1935 (Anderson, 1935). These measurements comprise 150 rows of data, with each row containing 5 data points. These data points refer to the widths and lengths of petal and sepals, as well as the identified genus of the plant. 100 of the rows, comprising flowers from the Iris Setosa and Iris Versicolor species, were collected from the Gaspé Peninsula in Quebec, Canada. Anderson noted that "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus" (Anderson, 1936). Anderson’s original purpose of collecting the data was to see if I. Versicolor was a result of a hybridisation event between I. Setosa and I. Virginica, as all three plants are found in the same geographical area (Ibid).
+The data set known as Fisher’s Iris data set is a collection of measurements compiled by the researcher Edgar Anderson in 1935 (Anderson, 1935). These measurements comprise 150 rows of data, with each row containing 5 data points. These data points refer to the widths and lengths of petal and sepals, as well as the identified genus of the plant. 100 of the rows of data, comprising flowers from the Iris Setosa and Iris Versicolor species, were collected from the Gaspé Peninsula in Quebec, Canada. Anderson noted that "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus" (Anderson, 1936). This amounted to 50 rows of data per flower. Anderson’s original purpose of collecting the data was to see if I. Versicolor was a result of a hybridisation event between I. Setosa and I. Virginica, as all three plants are found in the same geographical area (Ibid).
 
-In 1936, the botanist and statistician RA Fisher conducted similar research on Iris Virginica. This research, when added to Anderson’s original research, gave rise to the Fisher’s Iris data set. Fisher conducted statistical analysis of the data collected to help determine if there was a method of discriminating between the flowers, based solely on the data collected (without using the names) (Fisher, 1936). The data suggested that I. Setosa could be so discriminated, however, there was some overlap between I. Versicolor, and I. Virginica (Ibid).
+In 1936, the biologist and statistician RA Fisher conducted similar research on Iris Virginica. This research, when added to Anderson’s original research, gave rise to the Fisher’s Iris data set (100 rows of data from Anderson, 50 from Fisher). Fisher conducted statistical analysis of the data collected to help determine if there was a method of discriminating between the flowers, based solely on the data collected (without using the names) (Fisher, 1936). The data suggested that I. Setosa could be so discriminated, however, there was some overlap between I. Versicolor, and I. Virginica (Ibid).
 
 Uses of Fisher’s Iris data set
 
+Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, while searching Google using the term “Fisher’s Iris data set” returns more than 8.9m hits (as of 27th April, 2019). This suggests that this is a very popular data set. Due to the simple structure of the data, as well as its small size, the data set is often used in a number of scenarios. These scenarios include training students on data analysis, using a variety of statistical approaches, as well as a learning test bed for machine learning programs. This is due to the fact there are 2 distinct clusters within the data, and allows for the demonstration multivariate analysis, clustering, data classification, pattern recognition (Hoey, n.d.).
+
+ 
 Bibliography
 
 * Aggarwal, E., 2017. Pandas Python Tutorial - Learn by Examples. [Online] 
@@ -29,7 +42,9 @@ Available at: http://www.datasciencemadesimple.com/
 [Accessed 2 April 2019].
 * El-Shaarawi, A. & Anquandah, J. S., n.d. Environmental Statistics Report on Edgar Anderson's Iris Data Analysis. African Institute For Mathematical Science.
 * Fisher, R. A., 1936. The use of multiple measurements in taxonomic problems. Annals of Eugenics, 7(2), pp. 179 - 188.
-* Hoey, P. S., n.d. Statistical Analysis of the Iris Flower Dataset, s.l.: University of Massachusetts At Lowell.
+* Hoey, P. S., n.d. Statistical Analysis of the Iris Flower Dataset. [Online] 
+Available at: http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_Data_Visualization_Dataset_paper.pdf
+[Accessed 31 March 2019].
 * Idiap Research Institute, 2017. A Complete Application: Analysis of the Fisher Iris Dataset. [Online] 
 Available at: https://pythonhosted.org/bob/temp/bob.db.iris/doc/example.html
 [Accessed 2 April 2019].
