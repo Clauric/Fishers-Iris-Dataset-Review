@@ -28,6 +28,22 @@ Uses of Fisher’s Iris data set
 
 Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, while searching Google using the term “Fisher’s Iris data set” returns more than 8.9m hits (as of 27th April, 2019). This suggests that this is a very popular data set. Due to the simple structure of the data, as well as its small size, the data set is often used in a number of scenarios. These scenarios include training students on data analysis, using a variety of statistical approaches, as well as a learning test bed for machine learning programs. This is due to the fact there are 2 distinct clusters within the data, and allows for the demonstration multivariate analysis, clustering, data classification, pattern recognition (Hoey, n.d.).
 
+Technical information
+Languages and platforms used for the data analysis:
+Language:
+Python 3.7.3
+Packages / Libraries:
+Matplotlib 3.0.3
+Numpy 1.16.2
+Pandas 0.24.2
+Compiler:
+Anaconda 1.7.2
+Additional imports needed:
+Scatter_matrix from pandas.plotting
+Other information:
+Written in: Visual Studio Code v1.33.1
+Source of Iris data set:
+https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv
  
 Bibliography
 
@@ -64,4 +80,6 @@ Available at: https://matplotlib.org/contents.html
 * Ogundowole, O. O., 2017. Basic Analysis of Iris Data set Using Python. [Online] 
 Available at: https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342
 [Accessed 1 April 2019].
-
+* Wilkin, R., 2012. Discriminating Fisher's iris data set by using petal areas. [Online] 
+Available at: https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
+[Accessed 10 April 2019].
