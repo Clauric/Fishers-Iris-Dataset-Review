@@ -19,7 +19,7 @@ cols=iris_ds.columns.drop("Class")
 iris_ds[cols]=iris_ds[cols].apply(pd.to_numeric, errors="coerce")                       
 
 # Set the indexing column to Class
-iris_ds = iris_ds.set_index("Class")                                                    
+iris_ds = iris_ds.set_index("Class")  
 
 # Choose data set
 print()
@@ -136,11 +136,11 @@ if Number > 0 and Number < 5:
 
         # Scatter plot of entire data set.
         elif Number == 5:
-            scatter_matrix(iris_ds)
+            scatter_matrix(iris_ds, figsize=(6, 6), diagonal='kde')
             plt.suptitle("Scatter matrix for sepal and petals")                                   # Add title to diagram
             plt.show()
 
-        # Print desccription of data set
+        # Print description of data set
         elif Number == 6:
             print()
             print("Descriptive statistics of data set")
