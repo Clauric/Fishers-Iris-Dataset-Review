@@ -1,4 +1,9 @@
-# Introduction:
+# Table of Contents
+
+[Introduction](#Introduction)
+
+
+# Introduction
 
 This report is aimed at providing an understanding of “Fisher’s” Iris data set. The report is broken down into three main sections:
 
