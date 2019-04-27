@@ -39,6 +39,12 @@ Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, whi
 
 # 2. Analysis and results
 
+## What are sepals and petals?
+As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
+
+However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) do not have either sepals and petals, but instead tepals _(Kozak & Lotocka, 2013)_.
+That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as pet the data set.
+
 # 3. Technical information
 
 Languages and platforms used for the data analysis:
@@ -98,6 +104,9 @@ Available at: https://matplotlib.org/contents.html
 * Ogundowole, O. O., 2017. Basic Analysis of Iris Data set Using Python. [Online] 
 Available at: https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342
 [Accessed 1 April 2019].
+* Pacific Bulb Society, 2019. Iris. [Online] 
+Available at: https://www.pacificbulbsociety.org/pbswiki/index.php/Iris
+[Accessed 15 April 2019].
 * Wilkin, R., 2012. Discriminating Fisher's iris data set by using petal areas. [Online] 
 Available at: https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
 [Accessed 10 April 2019].
