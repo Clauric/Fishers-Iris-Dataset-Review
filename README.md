@@ -1,3 +1,16 @@
+Introduction:
+
+This report is aimed at providing an understanding of “Fisher’s” Iris data set. The report is broken down into three main sections:
+
+1)	Fisher’s Iris data set
+2)	Analysis and results
+3)	Technical information
+
+The 1st section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2nd section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a discussion of any issues that might arise from using this data. The last section will cover the technical information on how the accompanying Python script was used, including the Python packages required, and code used.
+
+What is Fisher’s Iris data set?
+
+The data set known as Fisher’s Iris data set is a collection of meausrements compiled by the researcher Edgar Anderson in 1935 (Anderson, 1935). These measurements comprise 150 rows of data, with each row containing 5 data points. These data points refer to the widths and lengths of petal and sepals, as well as the identified genus of the plant. 100 of the rows, comprising flowers from the Iris Setosa and Iris Versicolor species, were collected from the Gaspé Penninsula in Quebec, Canada. Anderson noted that "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus" (Anderson, 1936). 
 
 
 Bibliography
