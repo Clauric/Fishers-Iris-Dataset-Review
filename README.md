@@ -1,6 +1,11 @@
-# Table of Contents
-
-[Introduction](#Introduction)
+## Table of Contents
+  * [Introduction](#Introduction)
+  * [Fisher's IRis data set](#Fisher's-Iris-data-set)
+    * [What is Fisher's Iris data set?](#What-is-Fisher's-Iris-dat-set?)
+    * [Uses of fisher's Iris data set](#Used-of-fisher's-Iris-data-set)
+  * [Analysis and results](#Analysis-and-results)
+  * [Technical information](#Technical_information)
+  * [Bibliography](*Bibliography)
 
 
 # Introduction
@@ -9,24 +14,18 @@ This report is aimed at providing an understanding of “Fisher’s” Iris data
 
 1. Fisher’s Iris data set
 
-    1.1. What is Fisher’s Iris data set?
+    What is Fisher’s Iris data set?
   
-    1.2. Uses of Fisher’s Iris data set
+    Uses of Fisher’s Iris data set
 
 2. Analysis and results
-
-    2.1
-    
-    2.2
-    
-    2.3
 
 3. Technical information
 
 
 The 1st section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2nd section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a discussion of any issues that might arise from using this data. The last section will cover the technical information on how the accompanying Python script was used, including the Python packages required, and code used.
 
-# Fisher’s Iris data set
+# 1. Fisher’s Iris data set
 
 ## What is Fisher’s Iris data set?
 
@@ -38,7 +37,9 @@ In 1936, the biologist and statistician RA Fisher conducted similar research on 
 
 Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, while searching Google using the term _“Fisher’s Iris data set”_ returns more than 8.9m hits (as of 27th April, 2019). This suggests that this is a very popular data set. Due to the simple structure of the data, as well as its small size, the data set is often used in a number of scenarios. These scenarios include training students on data analysis, using a variety of statistical approaches, as well as a learning test bed for machine learning programs. This is due to the fact there are 2 distinct clusters within the data, and allows for the demonstration multivariate analysis, clustering, data classification, pattern recognition _(Hoey, n.d.)_.
 
-# Technical information
+# 2. Analysis and results
+
+# 3. Technical information
 
 Languages and platforms used for the data analysis:
 
@@ -59,6 +60,8 @@ Languages and platforms used for the data analysis:
 #### Other information:
 * Written in: Visual Studio Code v1.33.1
 * Source of Iris data set: https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv
+
+All the codes in this repository have been tested using <a href="https://cmder.net/">Cmder</a>, with the <a href="https://www.anaconda.com/">Anaconda</a> being the default Python platform.  
  
 # Bibliography
 
