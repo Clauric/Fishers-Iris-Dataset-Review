@@ -1,6 +1,6 @@
 ## Table of Contents
   * [Introduction](#Introduction)
-  * [Fisher's IRis data set](#Fisher's-Iris-data-set)
+  * [Fisher's Iris data set](#Fisher's-Iris-data-set)
     * [What is Fisher's Iris data set?](#What-is-Fisher's-Iris-dat-set?)
     * [Uses of fisher's Iris data set](#Used-of-fisher's-Iris-data-set)
   * [Analysis and results](#Analysis-and-results)
