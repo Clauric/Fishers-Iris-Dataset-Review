@@ -71,7 +71,7 @@ if Number > 0 and Number < 5:
     print("1) Original data set")                                                         # Original data
     print("2) Areas and ratios")                                                          # New data
     print()
-    Number = int(input("Please choose data set option "))
+    Number_2 = int(input("Please choose data set option "))
 
     # Remove petal and sepal lengths and widths
     if Number == 2:
@@ -82,7 +82,7 @@ if Number > 0 and Number < 5:
         iris_ds = iris_ds.drop(columns=["Petal_length", "Petal_width"], axis=1)           # Drop petal information from data set
         iris_ds = iris_ds.drop(columns=["Sepal_length", "Sepal_width"], axis=1)           # Drop sepal infomration from data set
 
-    if Number > 0 and Number < 3:                                                           # Only available if the user chose 1 or 2 on last input
+    if Number_2 > 0 and Number_2 < 3:                                                           # Only available if the user chose 1 or 2 on last input
 
         # Choice of activity
         print("---------------------------------------------------------------------------------------------------------------------------------------------------")
@@ -96,7 +96,7 @@ if Number > 0 and Number < 5:
         print("5) Scatter plots")                                                           # Provides a scatter plot of the data set
         print("6) Standard descriptive statistics")                                         # Provides the standard statistics created by pandas for the data set
 
-        if Number_data!=1:                                                                  # Only available if a subset of the data is chosen
+        if Number_2==2:                                                                       # Only available if the modified data set is used
             print("7) Min, Mean,  Max, Range, Variance, and Standard Deviation")            # Provides data similar to the standard statistics, but in a table format
         
         print()
@@ -133,7 +133,7 @@ if Number > 0 and Number < 5:
             plt.show()
 
         # Scatter plot of entire data set.
-        elif Number ==5:
+        elif Number == 5:
             scatter_matrix(iris_ds)
             plt.show()
 
@@ -144,7 +144,7 @@ if Number > 0 and Number < 5:
             print(iris_ds.describe())
             
         # Min, Mean, Max, Range, Variance, and Standard deviation
-        elif Number == 7 and Number_data!=1:
+        elif Number == 7 and Number_2 == 2:
             print()
             print(data_name)                                                                # Label for table
             print("Class\t\t\tCount\tMin\tMean\tMax\tRange\tVar\tStd Dev")                  # Create table columns
