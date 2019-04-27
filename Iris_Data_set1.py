@@ -74,14 +74,14 @@ if Number > 0 and Number < 5:
     Number_2 = int(input("Please choose data set option "))
 
     # Remove petal and sepal lengths and widths
-    if Number == 2:
+    if Number_2 == 2:
         iris_ds["Sepal_area_(cm^2)"] = iris_ds.Sepal_width * iris_ds.Sepal_length         # Formula for sepal area
         iris_ds["Sepal_ratio"] = iris_ds.Sepal_width / iris_ds.Sepal_length               # Formula for sepal ratio
         iris_ds["Petal_area_(cm^2)"] = iris_ds.Petal_width * iris_ds.Petal_length         # Formula for petal area
         iris_ds["Petal_ratio"] = iris_ds.Petal_width / iris_ds.Petal_length               # Formula for petal ratio
         iris_ds = iris_ds.drop(columns=["Petal_length", "Petal_width"], axis=1)           # Drop petal information from data set
         iris_ds = iris_ds.drop(columns=["Sepal_length", "Sepal_width"], axis=1)           # Drop sepal infomration from data set
-
+        
     if Number_2 > 0 and Number_2 < 3:                                                           # Only available if the user chose 1 or 2 on last input
 
         # Choice of activity
@@ -125,16 +125,19 @@ if Number > 0 and Number < 5:
         # Print box whisker plots.
         elif Number == 3:
             iris_ds.plot(kind="box", subplots = True, layout = (2,2), sharex = False, sharey = False)
+            plt.suptitle("Box and whisker diagrams for sepals and petals")                      # Add title to diagram
             plt.show()
 
         # Plot histogram of entire data set.
         elif Number == 4:
             iris_ds.hist()
+            plt.suptitle("Histograms of sepal and petal")                                       # Add title to diagram
             plt.show()
 
         # Scatter plot of entire data set.
         elif Number == 5:
             scatter_matrix(iris_ds)
+            plt.suptitle("Scatter matrix for sepal and petals")                                   # Add title to diagram
             plt.show()
 
         # Print desccription of data set
