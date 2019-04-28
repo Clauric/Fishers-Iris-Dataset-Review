@@ -58,7 +58,7 @@ That being said, for the purposes of this review, it shall be assumed that the 3
 The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names.
 
 | Data Type | |
-| --------- | ---------- |
+| :--------- | :----------: |
 | Sepal_length | float64 |
 | Sepal_width | float64 |
 | Petal_length | float64 |
@@ -67,7 +67,7 @@ The first step in conducting any analysis on the data, it is important to ensure
 | dtype: object |  |
 
 | Rows | Cols
-| ---- | ----- |
+| :----: | :-----: |
 | 150 | 5 |
 
 #### Heads and tails
@@ -77,7 +77,7 @@ The heads and tails of the data should also be checked, to ensure that the data 
 ###### Top 10 rows 
 
 | Class | Sepal_length | Sepal_width | Petal_length | Petal_width |
-| ------- | ------- | ------- | ------- | ------- |
+| :---- | :----: | :-----: | :-----: | :-----: |
 | Iris-setosa | 5.1 | 3.5 | 1.4 | 0.2 |
 | Iris-setosa | 4.9 | 3.0 | 1.4 | 0.2 |
 | Iris-setosa | 4.7 | 3.2 | 1.3 | 0.2 |
@@ -92,7 +92,7 @@ The heads and tails of the data should also be checked, to ensure that the data 
 ##### Bottom 10 rows 
 
 | Class | Sepal_length | Sepal_width | Petal_length | Petal_width |
-| ------- | ------- | ------- | ------- | ------- |
+| :---- | :----: | :-----: | :-----: | :-----: |
 | Iris-virginica | 6.7 | 3.1 | 5.6 | 2.4 |
 | Iris-virginica | 6.9 | 3.1 | 5.1 | 2.3 |
 | Iris-virginica | 5.8 | 2.7 | 5.1 | 1.9 |
@@ -108,10 +108,10 @@ The heads and tails of the data should also be checked, to ensure that the data 
 
 A description of the data will provide some idea with regards to the min, max, mean, variance, and standard deviation of the data. This will allow the examiner to understand the range of data being reviewed. However, it should be noted that it is already visible in the data above, there is a rather significant difference between the lengths of the _I. setosa_ and the _I. Virginica_ across sepal lengths, petal lengths, and petal widths. This will somewhat skew the data presented in the description.
 
-Descriptive statistics of data set
+##### Descriptive statistics of data set
 
 |  | Sepal_length | Sepal_width | Petal_length | Petal_width |
-| --- | --- | --- | --- | --- |
+| :---- | :----: | :-----: | :-----: | :-----: |
 | count  | 150.000000 | 150.000000  | 150.000000 | 150.000000 |
 | mean  |    5.843333  |  3.054000  |   3.758667  |  1.198667 |
 | std | 0.828066  |  0.433594  |   1.764420  |  0.763161 |
@@ -123,10 +123,10 @@ Descriptive statistics of data set
 
 An easier way to read the data would be as follows:
 
-All Irises
+##### All Irises
 
 | Class | Count | Min | Mean | Max | Range | Var | Std Dev |
-| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| :---- | :----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Sepal length | 150 | 4.3 | 5.84 | 7.9 | 3.60 | 0.68 | 0.82 |
 | Sepal width | 150 | 2.0 | 3.05 | 4.4 | 2.40 | 0.18 | 0.43 |
 | Petal length | 150 | 1.0 | 3.75 | 6.9 | 5.9 | 3.11 | 1.76 |
@@ -148,7 +148,7 @@ The scatter matrix shows a combination of both the scatter plots of the data poi
 
 As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and lengths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
 
-##### Data splitting
+#### Data splitting
 
 Based on the issue with the data being bimodal, it is appropriate that the data should be split by iris type. Doing this will allow for more accurate data to be gathered for each iris separately. By doing this splitting, we will be left with 3 sets of data, each with the same columns, but having only 50 rows of data each.
 
@@ -157,16 +157,16 @@ After splitting the data, and we can ascertain the following data about the indi
 ##### Iris Setosa
 
 | Class | Count | Min | Mean | Max | Range | Var | Std Dev |
-| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| :---- | :----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Sepal length | 50 | 4.3 | 5.00 | 5.8 | 1.5 | 0.12 | 0.35 |
 | Sepal width |50 | 2.3 | 3.41 | 4.4 | 2.10 | 0.14 | 0.38 |
 | Petal length | 50 | 1.0 | 1.46 | 1.9 | 0.89 | 0.03 | 0.17 |
 | Petal width |50 | 0.1 | 0.24 | 0.6 | 0.5 | 0.01 | 0.10 |
 
-###### Iris Versicolor
+##### Iris Versicolor
 
 | Class | Count | Min | Mean | Max | Range | Var | Std Dev |
-| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| :---- | :----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Sepal length | 50 | 4.9 | 5.93 | 7.0 | 2.09 | 0.26 | 0.51 |
 | Sepal width |50 | 2.0 | 2.77 | 3.4 | 1.4 | 0.09 | 0.31 |
 | Petal length | 50 | 3.0 | 4.26 | 5.1 | 2.09 | 0.22 | 0.46 |
@@ -175,7 +175,7 @@ After splitting the data, and we can ascertain the following data about the indi
 ##### Iris Virginica
 
 | Class | Count | Min | Mean | Max | Range | Var | Std Dev |
-| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| :---- | :----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Sepal length | 50 | 4.9 | 6.58 | 7.9 | 3.0 | 0.40 | 0.63 |
 | Sepal width |50 | 2.2 | 2.97 | 3.8 | 1.59 | 0.10 | 0.32 |
 | Petal length | 50 | 4.5 | 5.55 | 6.9 | 2.40 | 0.30 | 0.55 |
@@ -187,11 +187,18 @@ The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Vi
 
 The box and whisker plots of the individual iris species also becomes more uniform, when compared to the entire data set, after the data is split.
 
-<p><img align="center" width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIS.png" title="Box and whisker plot - I. Setosa"></p>
-<p><img align="justify"width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVE.png" title="Box and whisker plot - I. Versicolor">
-<img align="justify" width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png" title="Box and whisker plot - I. Virginica"></p>
+<p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIS.png"></p>
+<p align="center"> Box and whisker plot - _I. Setosa_</p>
+
+<p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVE.png">
+<img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png" "Box and whisker plot - I. Virginica"></p>
+<p align="center"> "Box and whisker plot for _I. Versicolor_ and _I. Virginica_ respectively</p>
 
 Focusing on _I. Versicolor_ and _I. Virginica_, an examination of the box and whisker plots would suggest that _I. Virginica_ has larger petal widths and lengths, as well sepal widths. This is supported by the data data generated for the minima, mean, and maxima of both plants. There is, however, some overlap between the flowers, in terms of sepal and petal sizes, especially in the lower and middle ranges of _I. Virginica_.
+
+#### A novel approach
+
+
 
 # 3. Technical information
 
@@ -346,6 +353,9 @@ Available at: https://www.listendata.com/2017/12/python-pandas-tutorial.html
 * Data Made Simple, 2019. DataMadeSimple.com. [Online] 
 Available at: http://www.datasciencemadesimple.com/
 [Accessed 2 April 2019].
+* Diwash, 2018. Machine Learning on Iris. [Online] 
+Available at: https://diwashrestha.com/2017/09/18/machine-learning-on-iris/
+[Accessed 2 April 2019].
 * El-Shaarawi, A. & Anquandah, J. S., n.d. Environmental Statistics Report on Edgar Anderson's Iris Data Analysis. African Institute For Mathematical Science.
 * Fisher, R. A., 1936. The use of multiple measurements in taxonomic problems. Annals of Eugenics, 7(2), pp. 179 - 188.
 * Hoey, P. S., n.d. Statistical Analysis of the Iris Flower Dataset. [Online] 
@@ -354,6 +364,9 @@ Available at: http://patrickhoey.com/downloads/Computer_Science/03_Patrick_Hoey_
 * Idiap Research Institute, 2017. A Complete Application: Analysis of the Fisher Iris Dataset. [Online] 
 Available at: https://pythonhosted.org/bob/temp/bob.db.iris/doc/example.html
 [Accessed 2 April 2019].
+* Kaggle.com, 2018. Iris Dataset - Exploratory Data Analysis. [Online] 
+Available at: https://www.kaggle.com/lalitharajesh/iris-dataset-exploratory-data-analysis
+[Accessed 20 April 2019].
 * Kaggle.com, 2018. Machine learning Basics with Iris data. [Online] 
 Available at: https://www.kaggle.com/biphili/machine-learning-basics-with-iris-data/data
 [Accessed 31 March 2019].
