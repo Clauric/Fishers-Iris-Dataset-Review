@@ -47,9 +47,9 @@ Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, whi
 ## What are sepals and petals?
 As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
 
-<img align="center" width="700" height="300" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg">
+<img align="center" width="734" height="411" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg">
 
-However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) do not have either sepals and petals, but instead tepals _(Kozak & Lotocka, 2013)_.
+However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals or petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
 
 # 2. Analysis and results
@@ -106,7 +106,7 @@ The heads and tails of the data should also be checked, to ensure that the data 
 
 #### Description of data
 
-A description fo the data will provide some idea with regards to the min, max, mean, variance, and standard deviation of the data. This will allow the examiner to understand the range of data being reviewed. However, it should be noted that it is already visible in the data above, there is a rather significant differencce between the lengths of the _I. setosa_ and the _I. Virginica_ across sepal lengths, petal lengths, and petal widths. This will somewhat skew the data presented in the description.
+A description of the data will provide some idea with regards to the min, max, mean, variance, and standard deviation of the data. This will allow the examiner to understand the range of data being reviewed. However, it should be noted that it is already visible in the data above, there is a rather significant difference between the lengths of the _I. setosa_ and the _I. Virginica_ across sepal lengths, petal lengths, and petal widths. This will somewhat skew the data presented in the description.
 
 Descriptive statistics of data set
 
@@ -132,7 +132,7 @@ All Irises
 | Petal length | 150 | 1.0 | 3.75 | 6.9 | 5.9 | 3.11 | 1.76 |
 | Petal width | 150 | 0.1 | 1.19 | 2.5 | 2.4 | 0.58 | 0.76 |
 
-Comparing the minimi, means, and maximi (from the description) and the values for _I. Setosa_ (from the head printout), it is clear that there is significant differences in the sepal widths, as well as the petal widths and lengths. However, it is important to continue with a review of the overall data set, if only to be able to demonstrate the difference in the data later.
+Comparing the minima, means, and maxima (from the description) and the values for _I. Setosa_ (from the head printout), it is clear that there is significant differences in the sepal widths, as well as the petal widths and lengths. However, it is important to continue with a review of the overall data set, if only to be able to demonstrate the difference in the data later.
 
 #### Graphs and plots
 
@@ -146,7 +146,7 @@ The scatter matrix shows a combination of both the scatter plots of the data poi
 
 <p align="center"><img width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_Entire_data.png"></p>
 
-As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and legths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
+As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and lengths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
 
 
 
@@ -292,6 +292,7 @@ while i < 4:                                                                    
 ````
 
 [1]: All data in tables was returned in the Cmder command interface, and was translated into tables using the GitHub markup to produce the tables.
+
 [2]: The distributions are not perfectly normal, with the sepal length being a more Gaussian distribution, while the sepal width being more normal. Both distributions are somewhat right skewed.
 
 # Bibliography
@@ -332,6 +333,9 @@ Available at: https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-u
 * Pacific Bulb Society, 2019. Iris. [Online] 
 Available at: https://www.pacificbulbsociety.org/pbswiki/index.php/Iris
 [Accessed 15 April 2019].
+* Paruchuri, V., 2016. Pandas Tutorial: Data analysis with Python: Part 1. [Online] 
+Available at: https://www.dataquest.io/blog/pandas-python-tutorial/
+[Accessed 2 April 2019].
 * Wilkin, R., 2012. Discriminating Fisher's iris data set by using petal areas. [Online] 
 Available at: https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
 [Accessed 10 April 2019].
