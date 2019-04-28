@@ -34,6 +34,7 @@ The 1st section will provide a brief outline of what is Fisher’s Iris data set
 
 The data set known as Fisher’s Iris data set is a collection of measurements compiled by the researcher Edgar Anderson in 1935 _(Anderson, 1935)_. These measurements comprise 150 rows of data, with each row containing 5 data points. These data points refer to the widths and lengths of petal and sepals, as well as the identified genus of the plant. 100 of the rows of data, comprising flowers from the _Iris Setosa_ and _Iris Versicolor_ species, were collected from the Gaspé Peninsula in Quebec, Canada. Anderson noted that _"all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus"_ _(Anderson, 1936)_. This amounted to 50 rows of data per flower. Anderson’s original purpose of collecting the data was to see if _I. Versicolor_ was a result of a hybridisation event between _I. Setosa_ and _I. Virginica_, as all three plants are found in the same geographical area _(Ibid)_.
 
+<img align="right" src="RA_Fisher.jpg">
 In 1936, the biologist and statistician RA Fisher conducted similar research on _I. Virginica_. This research, when added to Anderson’s original research, gave rise to the Fisher’s Iris data set (100 rows of data from Anderson, 50 from Fisher). Fisher conducted statistical analysis of the data collected to help determine if there was a method of discriminating between the flowers, based solely on the data collected (without using the names) _(Fisher, 1936)_. The data suggested that _I. Setosa_ could be so discriminated, however, there was some overlap between _I. Versicolor_, and _I. Virginica (Ibid)_.
 
 ## Uses of Fisher’s Iris data set
@@ -42,6 +43,8 @@ Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, whi
 
 ## What are sepals and petals?
 As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
+
+![Irises](Iris.jpg)
 
 However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) do not have either sepals and petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
@@ -145,8 +148,13 @@ Even though there is a skew in data already visible, it is important to continue
 
 The box and whisker plot, as well as the scatter matrix can be used to show the range and scope of the data found in the data set.
 
-[Box and Whisker plot for entire data set](Box_Whisker_Entire_data.png)
+![Box and Whisker plot for entire data set](Box_Whisker_Entire_data.png)
 
+As can be seen from the plot of the sepal widths, there are a number of outliers (which are 150% of the interquartile range). However, 50% of the data points, around the median value, exist within a very short range. In contrast, the 50% range for the petal widths and lengths has a far larger range below the median value.
+
+The scatter matrix shows a combination of both the scatter plots of the data points plotted against each other, as well as a line grapgh showing the distribution of the data plots, when plotted against itself.
+
+![Scatter Matrix plot for entire data set](Scatter_matrix_Entire_data.png)
 
 # 3. Technical information
 
