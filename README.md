@@ -145,7 +145,7 @@ Even though there is a skew in data already visible, it is important to continue
 
 The box and whisker plot, as well as the scatter matrix can be used to show the range and scope of the data found in the data set.
 
-
+[Box and Whisker plot for entire data set](Box_Whisker_Entire_data.png)
 
 
 # 3. Technical information
