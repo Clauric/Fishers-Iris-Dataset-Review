@@ -6,6 +6,8 @@
     * [What are sepals and petals?](#what-are-sepals-and-petals)
   * [Analysis and results](#2-analysis)
     * [Overall Data](#overall-data)
+    * [Data splitting](#data-splitting)
+    * [A novel approach](#a-novel-approach)
   * [Conclusion](#3-conclusion)
   * [Technical information](#4-technical-information)
   * [Codes](#5-codes)
@@ -26,7 +28,7 @@ This report is aimed at providing an understanding of “Fisher’s” Iris data
 
 5. Code
 
-The 1<sup>st</sup> section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2<sup>nd</sup> section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a review of a novel approach in how to modify the data set for further analysis. A brief conclsuion will be provided in the 3<sup>rd</sup> section  of this report. The <sup>4th</sup> section will cover the technical information on how the accompanying Python script was used, including the Python packages required. The last section will cover samples of the code which is used in the conducting the analysis (this can also be found in the accompanying [python script](https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Iris_Data_set1.py))
+The 1<sup>st</sup> section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2<sup>nd</sup> section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a review of a novel approach in how to modify the data set for further analysis. A brief conclusion will be provided in the 3<sup>rd</sup> section  of this report. The <sup>4th</sup> section will cover the technical information on how the accompanying Python script was used, including the Python packages required. The last section will cover samples of the code which is used in the conducting the analysis (this can also be found in the accompanying [python script](https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Iris_Data_set1.py))
 
 # 1. Fisher’s Iris data set
 
@@ -47,7 +49,7 @@ As can be seen from the image below, petals and sepals are parts of the flower o
 
 <img align="center" width="734" height="411" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg">
 
-However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals or petals, but instead tepals _(Kozak & Lotocka, 2013)_.
+However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals nor petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
 
 # 2. Analysis
@@ -179,7 +181,7 @@ After splitting the data, and we can ascertain the following data about the indi
 | Petal length | 50 | 4.5 | 5.55 | 6.9 | 2.40 | 0.30 | 0.55 |
 | Petal width |50 | 1.4 | 2.02 | 2.5 | 1.1 | 0.07 | 0.27 |
 
-The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Virginica_ are 18.6% and 31.6% greater than the mean of _I. Setosa_ respectively. Likewise, there are large differences in mean petal lengths (191.7%, and 280.1%), and mean petal lengths (450% and 741.67%) between _I. Versicolor_ and _I. Virginica_ and _I. Setosa_) [3]. From ths we can surmise that the two clusters seen on the scatter plots are _I. Setosa_ (smaller, isolated cluster), and _I. Versicolor_ and _I. Virginica_ (larger cluster).
+The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Virginica_ are 18.6% and 31.6% greater than the mean of _I. Setosa_ respectively. Likewise, there are large differences in mean petal lengths (191.7%, and 280.1%), and mean petal lengths (450% and 741.67%) between _I. Versicolor_ and _I. Virginica_ and _I. Setosa_) [3]. From this we can surmise that the two clusters seen on the scatter plots are _I. Setosa_ (smaller, isolated cluster), and _I. Versicolor_ and _I. Virginica_ (larger cluster).
 
 #### Data split box and whiskers plots
 
@@ -192,11 +194,11 @@ The box and whisker plots of the individual iris species also becomes more unifo
 <img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png"></p>
 <p align="center"> "Box and whisker plot for I. Versicolor and I. Virginica respectively</p>
 
-Focusing on _I. Versicolor_ and _I. Virginica_, an examination of the box and whisker plots would suggest that _I. Virginica_ has larger petal widths and lengths, as well sepal widths. This is supported by the data data generated for the minima, mean, and maxima of both plants. There is, however, some overlap between the flowers, in terms of sepal and petal sizes, especially in the lower and middle ranges of _I. Virginica_.
+Focusing on _I. Versicolor_ and _I. Virginica_, an examination of the box and whisker plots would suggest that _I. Virginica_ has larger petal widths and lengths, as well sepal widths. This is supported by the data generated for the minima, mean, and maxima of both plants. There is, however, some overlap between the flowers, in terms of sepal and petal sizes, especially in the lower and middle ranges of _I. Virginica_.
 
 ## A novel approach
 
-The area of the sepals and petals have been suggested as a way of discriminating between the various species of irises in the data set (Wilkin, 2012), (Winkelman, 2014). In addition, Winkelman alos suggested that the ratio of the sepal/petal’s width to length could provide additional discrimination.
+The area of the sepals and petals have been suggested as a way of discriminating between the various species of irises in the data set (Wilkin, 2012), (Winkelman, 2014). In addition, Winkelman also suggested that the ratio of the sepal/petal’s width to length could provide additional discrimination.
 
 While maintaining the same size and shape of the data set (150 rows, 5 columns), the data was converted so that the columns were now calculated as “Sepal area (cm<sup>2</sup>), Sepal ratio, Petal area (cm<sup>2</sup>), and Petal ratio. These were calculated as
 
@@ -254,7 +256,7 @@ Additionally, the box and whisker plots and scatter matrix plots are as follows:
 
 With the exception of the sepal area vs petal ratio scatter plots, there are two distinct clusters evident in the scatter matrix plot. Additionally, the distribution graphs show more clearly bimodal distribution, when compared to the initial data set. In fact, all 3/4 of the distribution graphs clearly show two peaks, while the sepal area distribution shows a second hump to the right of the main peak.
 
-The box and whisker plots shows that the sepal area and petal ratio are quite concentrated, while the range of the petal area is quite large. When compared to the intial data set, there half as many outliers (4 vs 2) in the derived data set.
+The box and whisker plots shows that the sepal area and petal ratio are quite concentrated, while the range of the petal area is quite large. When compared to the initial data set, there half as many outliers (4 vs 2) in the derived data set.
 
 Splitting the data into the separate iris species (as previous) produces the following statistics, and box and whisker plots:
 
@@ -292,11 +294,11 @@ Splitting the data into the separate iris species (as previous) produces the fol
 <img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVIM.png"></p>
 <p align="center"> "Box and whisker plot for I. Versicolor and I. Virginica respectively modified</p>
 
-The modified data produces a slightly different results when compared to the unmodified data. The sepal area comparision shows that _I. Versicolor_ has a small area, acroos the minimum, mean, and max values, than either of the other irises. The sepal ratio is bigger (32.4%, 33.8%) for _I. Setosa_ when compared to the other irises [3]. However, when _I. Setosa_ is compared to both _I. Versicolor_ and _I. Viriginica_ across the petal area (10.9%, 3.2%), and petal ratio (48.4%, 44.4%). There is considerable overlap between _I. Versicolor_ and _I.Virginica_ in the ratios , while _I. Viriginica_ is considerably larger when measured across the the areas.
+The modified data produces a slightly different results when compared to the unmodified data. The sepal area comparison shows that _I. Versicolor_ has a small area, across the minimum, mean, and max values, than either of the other irises. The sepal ratio is bigger (32.4%, 33.8%) for _I. Setosa_ when compared to the other irises [3]. However, when _I. Setosa_ is compared to both _I. Versicolor_ and _I. Virginica_ across the petal area (10.9%, 3.2%), and petal ratio (48.4%, 44.4%). There is considerable overlap between _I. Versicolor_ and _I.Virginica_ in the ratios, while _I. Virgnica_ is considerably larger when measured across the areas.
 
 # 3. Conclusion
 
-From the data, it is understandable how Fisher's Iris data set can be used to train machine learning algorithms for pattern recognition, and clustering. The analysis suggests that there the data set contains 2 separate clusters. The larger of the clusters is made up of an overlap of data points from _I. Versicolor_ and _I. Virginia_ while the smaller cluster is made up of _I. Setosa_. This is shown clearly in both the main and modified scatter matrix plot, as well as the statistics derived from splitting the data. In the larger cluster, there is less distinction between the two iris species. This is where the machine learning can be used to determine which data points refer to which iris, using a combination of pattern reconginition, data classification, and clustering.
+From the data, it is understandable how Fisher's Iris data set can be used to train machine learning algorithms for pattern recognition, and clustering. The analysis suggests that there the data set contains 2 separate clusters. The larger of the clusters is made up of an overlap of data points from _I. Versicolor_ and _I. Virginia_ while the smaller cluster is made up of _I. Setosa_. This is shown clearly in both the main and modified scatter matrix plot, as well as the statistics derived from splitting the data. In the larger cluster, there is less distinction between the two iris species. This is where the machine learning can be used to determine which data points refer to which iris, using a combination of pattern recognition data classification, and clustering.
 
 # 4. Technical information
 
@@ -492,3 +494,6 @@ Available at: https://www.dataquest.io/blog/pandas-python-tutorial/
 * Wilkin, R., 2012. Discriminating Fisher's iris data set by using petal areas. [Online] 
 Available at: https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html
 [Accessed 10 April 2019].
+* Winkelman, M., 2014. Recipe 6: Analysis of Covariance. [Online] 
+Available at: https://rstudio-pubs-static.s3.amazonaws.com/38440_c8cb2894ff1f4e438bf4e1043a405ad8.html
+[Accessed 1 April 2019].
