@@ -3,6 +3,7 @@
   * [Fisher's Iris data set](#Fisher's-Iris-data-set)
     * [What is Fisher's Iris data set?](#What-is-Fisher's-Iris-dat-set?)
     * [Uses of fisher's Iris data set](#Used-of-fisher's-Iris-data-set)
+    * [What are sepals and petals?](#What-are-sepals-and-petals?)
   * [Analysis and results](#Analysis-and-results)
   * [Technical information](#Technical_information)
   * [Bibliography](*Bibliography)
@@ -17,6 +18,8 @@ This report is aimed at providing an understanding of “Fisher’s” Iris data
     What is Fisher’s Iris data set?
   
     Uses of Fisher’s Iris data set
+    
+    What are sepals and petals?
 
 2. Analysis and results
 
@@ -37,13 +40,14 @@ In 1936, the biologist and statistician RA Fisher conducted similar research on 
 
 Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, while searching Google using the term _“Fisher’s Iris data set”_ returns more than 8.9m hits (as of 27th April, 2019). This suggests that this is a very popular data set. Due to the simple structure of the data, as well as its small size, the data set is often used in a number of scenarios. These scenarios include training students on data analysis, using a variety of statistical approaches, as well as a learning test bed for machine learning programs. This is due to the fact there are 2 distinct clusters within the data, and allows for the demonstration multivariate analysis, clustering, data classification, pattern recognition _(Hoey, n.d.)_.
 
-# 2. Analysis and results
-
 ## What are sepals and petals?
 As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
 
 However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) do not have either sepals and petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
+
+# 2. Analysis and results
+
 
 # 3. Technical information
 
