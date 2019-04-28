@@ -47,7 +47,7 @@ Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, whi
 ## What are sepals and petals?
 As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
 
-<img align="center" width="734" height="411" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg">
+<img align="center" width="734" height="411" src="/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg?raw=true" alt="Irises.jpg">
 
 However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals or petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
