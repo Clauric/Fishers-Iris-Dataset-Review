@@ -198,8 +198,63 @@ Focusing on _I. Versicolor_ and _I. Virginica_, an examination of the box and wh
 
 #### A novel approach
 
+The area of the sepals and petals have been suggested as a way of discriminating between the various species of irises in the data set (Wilkin, 2012), (Winkelman, 2014). In addition, Winkelman alos suggested that the ratio of the sepal/petal’s width to length could provide additional discrimination.
 
+While maintaining the same size and shape of the data set (150 rows, 5 columns), the data was converted so that the columns were now calculated as “Sepal area (cm<sup>2</sup>), Sepal ratio, Petal area (cm<sup>2</sup>), and Petal ratio. These were calculated as
 
+  * Area = length x width
+  * Ratio = width / length
+
+The previous column names and data was dropped to ensure the data set shape remained the same.
+
+The head and tail data, as well as the basic statistics for the resulting data set is as follows:
+
+##### Top 10 rows
+
+Class | Sepal_area_(cm<sup>2</sup>) | Sepal_ratio| Petal_area_(cm <sup>2</sup>) | Petal_ratio |
+| :---- | :----: | :----: | :----: | :----: |
+| Iris-setosa | 17.85 | 0.686275 | 0.28 | 0.142857 |
+| Iris-setosa | 14.70 | 0.612245 | 0.28 | 0.142857 |
+| Iris-setosa | 15.04 | 0.680851 | 0.26 | 0.153846 |
+| Iris-setosa | 14.26 | 0.673913 | 0.30 | 0.133333 |
+| Iris-setosa | 18.00 | 0.720000 | 0.28 | 0.142857 |
+| Iris-setosa | 21.06 | 0.722222 | 0.68 | 0.235294 |
+| Iris-setosa | 15.64 | 0.739130 | 0.42 | 0.214286 |
+| Iris-setosa | 17.00 | 0.680000 | 0.30 | 0.133333 |
+| Iris-setosa | 12.76 | 0.659091 | 0.28 | 0.142857 |
+| Iris-setosa | 15.19 | 0.632653 | 0.15 | 0.066667 |
+
+##### Bottom 10 rows
+
+Class | Sepal_area_(cm<sup>2</sup>) | Sepal_ratio| Petal_area_(cm<sup>2</sup>) | Petal_ratio |
+| :---- | :----: | :----: | :----: | :----: |
+| Iris-virginica | 20.77 | 0.462687 | 13.44 | 0.428571 |
+| Iris-virginica | 21.39 | 0.449275 | 11.73 | 0.450980 |
+| Iris-virginica | 15.66 | 0.465517 | 9.69 | 0.372549 |
+| Iris-virginica | 21.76 | 0.470588 | 13.57 | 0.389831 |
+| Iris-virginica | 22.11 | 0.492537 | 14.25 | 0.438596 |
+| Iris-virginica | 20.10 | 0.447761 | 11.96 | 0.442308 |
+| Iris-virginica | 15.75 | 0.396825 | 9.50 | 0.380000 |
+| Iris-virginica | 19.50 | 0.461538 | 10.40 | 0.384615 |
+| Iris-virginica | 21.08 | 0.548387 | 12.42 | 0.425926 |
+| Iris-virginica | 17.70 | 0.508475 | 9.18 | 0.352941 |
+
+##### All Irises
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Sepal Area (cm<sup>2</sup>) | 150 | 10.0 | 17.8 | 30.0 | 20.0 | 11.3 | 3.36 |
+| Sepal Ratio | 150 | 0.33 | 0.53 | 0.78 | 0.45 | 0.01 | 0.11 |
+| Petal Area (cm<sup>2</sup>) | 150 | 0.11 | 5.79 | 15.8 | 15.7 | 22.2 | 4.71 |
+| Petal Ratio | 150 | 0.06 | 0.28 | 0.47 | 0.40 | 0.00 | 0.09 |
+
+Additionally, the box and whisker plots and scatter matrix plots are as follows:
+
+<p align="center"><img width="640" height="478" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Box_Whisker_AR.png"></p>
+
+<p align="center"><img width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_AR.png"></p>
+
+The 
 # 3. Technical information
 
 Languages and platforms used for the data analysis:
