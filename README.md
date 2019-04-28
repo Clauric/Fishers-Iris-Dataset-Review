@@ -49,18 +49,16 @@ That being said, for the purposes of this review, it shall be assumed that the 3
 # 2. Analysis and results
 
 ## Overall data
-The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names.
-In order to check this, the following scripts were run:
+The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names. In order to check this, the following scripts were run:
 
 ````python
-print()
 print("Data Type")
 print(iris_ds.dtypes)
 print()
 print("Rows,", "Cols")
 print(iris_ds.shape)
 ````
-This will return the following results, confirming that the data is in the format expected:
+This will return the following results, confirming that the data is in the format expected [1]:
 
 | Data Type | |
 | --------- | ---------- |
@@ -75,6 +73,80 @@ This will return the following results, confirming that the data is in the forma
 | Rows | Cols
 | ---- | ----- |
 | 150 | 5 |
+
+#### Heads and tails
+
+The heads and tails of the data were also checked, in order to visualise the data, using the following code:
+
+````python
+print("Top 10 rows")
+print(iris_ds.head(10))
+print()
+print("Bottom 10 rows")
+print(iris_ds.tail(10))
+````
+
+This returned to following data, indicating that the information contained within the data was as expected:
+
+###### Top 10 rows 
+
+| Class | Sepal_length | Sepal_width | Petal_length | Petal_width |
+| ------- | ------- | ------- | ------- | ------- |
+| Iris-setosa | 5.1 | 3.5 | 1.4 | 0.2 |
+| Iris-setosa | 4.9 | 3.0 | 1.4 | 0.2 |
+| Iris-setosa | 4.7 | 3.2 | 1.3 | 0.2 |
+| Iris-setosa | 4.6 | 3.1 | 1.5 | 0.2 |
+| Iris-setosa | 5.0 | 3.6 | 1.4 | 0.2 |
+| Iris-setosa | 5.4 | 3.9 | 1.7 | 0.4 |
+| Iris-setosa | 4.6 | 3.4 | 1.4 | 0.3 |
+| Iris-setosa | 5.0 | 3.4 | 1.5 | 0.2 |
+| Iris-setosa | 4.4 | 2.9 | 1.4 | 0.2 |
+| Iris-setosa | 4.9 | 3.1 | 1.5 | 0.1 |
+
+##### Bottom 10 rows 
+
+| Class | Sepal_length | Sepal_width | Petal_length | Petal_width |
+| ------- | ------- | ------- | ------- | ------- |
+| Iris-virginica | 6.7 | 3.1 | 5.6 | 2.4 |
+| Iris-virginica | 6.9 | 3.1 | 5.1 | 2.3 |
+| Iris-virginica | 5.8 | 2.7 | 5.1 | 1.9 |
+| Iris-virginica | 6.8 | 3.2 | 5.9 | 2.3 |
+| Iris-virginica | 6.7 | 3.3 | 5.7 | 2.5 |
+| Iris-virginica | 6.7 | 3.0 | 5.2 | 2.3 |
+| Iris-virginica | 6.3 | 2.5 | 5.0 | 1.9 |
+| Iris-virginica | 6.5 | 3.0 | 5.2 | 2.0 |
+| Iris-virginica | 6.2 | 3.4 | 5.4 | 2.3 |
+| Iris-virginica | 5.9 | 3.0 | 5.1 | 1.8 |
+
+#### Description of data
+
+A description fo the data will provide some idea with regards to the min, max, mean, variance, and standard deviation of the data. This will allow the examiner to understand the range of data being reviewed. However, it should be noted that it is already visible in the data above, there is a rather significant differencce between the lengths of the _I. setosa_ and the _I. Virginica_ across sepal lengths, petal lengths, and petal widths. This will somewhat skew the data presented in the description.
+
+````python
+print("Descriptive statistics of data set")
+print(iris_ds.describe())
+````
+Descriptive statistics of data set
+
+|  | Sepal_length | Sepal_width | Petal_length | Petal_width |
+| --- | --- | --- | --- | --- |
+| count  | 150.000000 | 150.000000  | 150.000000 | 150.000000 |
+| mean  |    5.843333  |  3.054000  |   3.758667  |  1.198667 |
+| std | 0.828066  |  0.433594  |   1.764420  |  0.763161 |
+| min | 4.300000  |  2.000000  |   1.000000  |  0.100000 |
+| 25% | 5.100000  |  2.800000  |   1.600000  |  0.300000 |
+| 50% | 5.800000  |  3.000000  |   4.350000  |  1.300000 |
+| 75% | 6.400000  |  3.300000  |   5.100000  |  1.800000 |
+| max | 7.900000  |  4.400000  |   6.900000  |  2.500000 |
+
+Even though there is a skew in data already visible, it is important to continue with a review of the overall data st, if only to be able to demonstrate the difference in the data later.
+
+#### Graphs and plots
+
+The box and whisker plot, as well as the scatter matrix can be used to show the range and scope of the data found in the data set.
+
+
+
 
 # 3. Technical information
 
@@ -99,7 +171,9 @@ Languages and platforms used for the data analysis:
 * Source of Iris data set: https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv
 
 All the codes in this repository have been tested using <a href="https://cmder.net/">Cmder</a>, with the <a href="https://www.anaconda.com/">Anaconda</a> being the default Python platform.  
- 
+
+[1]: All data in tables was returned in the Cmder command interface, and was translated into tables using the GitHub markup to produce the tables.
+
 # Bibliography
 
 * Aggarwal, E., 2017. Pandas Python Tutorial - Learn by Examples. [Online] 
