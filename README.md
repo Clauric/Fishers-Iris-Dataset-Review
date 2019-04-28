@@ -7,7 +7,8 @@
   * [Analysis and results](#2-analysis-and-results)
     * [Overall Data](#overall-data)
   * [Technical information](#3-technical-information)
-  * [Bibliography](#bibliography)
+  * [Codes](#4-codes)
+  * [Bibliography](#5-bibliography)
 
 
 # Introduction
@@ -54,16 +55,7 @@ That being said, for the purposes of this review, it shall be assumed that the 3
 # 2. Analysis and results
 
 ## Overall data
-The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names. In order to check this, the following scripts were run:
-
-````python
-print("Data Type")
-print(iris_ds.dtypes)
-print()
-print("Rows,", "Cols")
-print(iris_ds.shape)
-````
-This will return the following results, confirming that the data is in the format expected [1]:
+The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names.
 
 | Data Type | |
 | --------- | ---------- |
@@ -74,24 +66,13 @@ This will return the following results, confirming that the data is in the forma
 | Class | object |
 | dtype: object |  |
 
-
 | Rows | Cols
 | ---- | ----- |
 | 150 | 5 |
 
 #### Heads and tails
 
-The heads and tails of the data were also checked, in order to visualise the data, using the following code:
-
-````python
-print("Top 10 rows")
-print(iris_ds.head(10))
-print()
-print("Bottom 10 rows")
-print(iris_ds.tail(10))
-````
-
-This returned to following data, indicating that the information contained within the data was as expected:
+The heads and tails of the data should also be checked, to ensure that the data is as expected.
 
 ###### Top 10 rows 
 
@@ -127,10 +108,6 @@ This returned to following data, indicating that the information contained withi
 
 A description fo the data will provide some idea with regards to the min, max, mean, variance, and standard deviation of the data. This will allow the examiner to understand the range of data being reviewed. However, it should be noted that it is already visible in the data above, there is a rather significant differencce between the lengths of the _I. setosa_ and the _I. Virginica_ across sepal lengths, petal lengths, and petal widths. This will somewhat skew the data presented in the description.
 
-````python
-print("Descriptive statistics of data set")
-print(iris_ds.describe())
-````
 Descriptive statistics of data set
 
 |  | Sepal_length | Sepal_width | Petal_length | Petal_width |
@@ -144,7 +121,18 @@ Descriptive statistics of data set
 | 75% | 6.400000  |  3.300000  |   5.100000  |  1.800000 |
 | max | 7.900000  |  4.400000  |   6.900000  |  2.500000 |
 
-Even though there is a skew in data already visible, it is important to continue with a review of the overall data st, if only to be able to demonstrate the difference in the data later.
+An easier way to read the data would be as follows:
+
+All Irises
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| Sepal length | 150 | 4.3 | 5.84 | 7.9 | 3.60 | 0.68 | 0.82 |
+| Sepal width | 150 | 2.0 | 3.05 | 4.4 | 2.40 | 0.18 | 0.43 |
+| Petal length | 150 | 1.0 | 3.75 | 6.9 | 5.9 | 3.11 | 1.76 |
+| Petal width | 150 | 0.1 | 1.19 | 2.5 | 2.4 | 0.58 | 0.76 |
+
+Comparing the minimi, means, and maximi (from the description) and the values for _I. Setosa_ (from the head printout), it is clear that there is significant differences in the sepal widths, as well as the petal widths and lengths. However, it is important to continue with a review of the overall data set, if only to be able to demonstrate the difference in the data later.
 
 #### Graphs and plots
 
@@ -154,9 +142,16 @@ The box and whisker plot, as well as the scatter matrix can be used to show the 
 
 As can be seen from the plot of the sepal widths, there are a number of outliers (which are 150% of the interquartile range). However, 50% of the data points, around the median value, exist within a very short range. In contrast, the 50% range for the petal widths and lengths has a far larger range below the median value.
 
-The scatter matrix shows a combination of both the scatter plots of the data points plotted against each other, as well as a line grapgh showing the distribution of the data plots, when plotted against itself.
+The scatter matrix shows a combination of both the scatter plots of the data points plotted against each other, as well as a line graph showing the distribution of the data plots, when plotted against itself.
 
 <p align="center"><img width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_Entire_data.png"></p>
+
+As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and legths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
+
+
+
+
+
 
 # 3. Technical information
 
@@ -182,7 +177,122 @@ Languages and platforms used for the data analysis:
 
 All the codes in this repository have been tested using <a href="https://cmder.net/">Cmder</a>, with the <a href="https://www.anaconda.com/">Anaconda</a> being the default Python platform.  
 
+# 4. Codes
+
+The following codes were used to generate the data found in the report. All the codes can be found in the python script accompanying this report.
+
+##### Import data
+
+````python
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"            # URL of data source being used
+name = ["Sepal_length", "Sepal_width", "Petal_length", "Petal_width", "Class"]          # Headers of rows, as data source does not contain any
+iris_ds = pd.read_csv(url, names=name)                                                  # Loading of data set to "iris_ds"
+````
+
+##### Data shape and size:
+
+````python
+print("Data Type")
+print(iris_ds.dtypes)
+print()
+print("Rows,", "Cols")
+print(iris_ds.shape)
+````
+
+##### Head and tail
+
+````python
+print("Top 10 rows")
+print(iris_ds.head(10))
+print()
+print("Bottom 10 rows")
+print(iris_ds.tail(10))
+````
+
+##### Description of data
+
+````python
+print("Descriptive statistics of data set")
+print(iris_ds.describe())
+````
+
+##### Box Whisker plot
+
+````python
+iris_ds.plot(kind="box", subplots = True, layout = (2,2), sharex = False, sharey = False)
+plt.suptitle("Box and whisker diagrams for sepals and petals")
+plt.show()
+````
+
+##### Scatter Matrix plot
+
+````python
+scatter_matrix(iris_ds, figsize=(6, 6), diagonal='kde')
+plt.suptitle("Scatter matrix for sepal and petals")                                  
+plt.show()
+````
+
+##### Create data set only containing one iris species
+
+````python
+iris_ds = iris_ds.drop("Iris-versicolor", axis=0)                                   # Removes the Iris Versicolor data from the data set
+iris_ds = iris_ds.drop("Iris-virginica", axis=0)                                    # Removes the Iris Virginica data from the data set
+....
+
+iris_ds = iris_ds.drop("Iris-setosa", axis=0)                                       # Removes the Iris Setosa data from the data set
+iris_ds = iris_ds.drop("Iris-virginica", axis=0)                                    # Removes the Iris Virginica data from the data set
+....
+
+iris_ds = iris_ds.drop("Iris-versicolor", axis=0)                                   # Removes the Iris Versicolor data from the data set
+iris_ds = iris_ds.drop("Iris-setosa", axis=0)                                       # Removes the Iris Setosa data from the data set
+````
+
+##### Change columns from widths and lengths to areas and ratios
+
+```` python
+iris_ds["Sepal_area_(cm^2)"] = iris_ds.Sepal_width * iris_ds.Sepal_length         # Formula for sepal area
+iris_ds["Sepal_ratio"] = iris_ds.Sepal_width / iris_ds.Sepal_length               # Formula for sepal ratio
+iris_ds["Petal_area_(cm^2)"] = iris_ds.Petal_width * iris_ds.Petal_length         # Formula for petal area
+iris_ds["Petal_ratio"] = iris_ds.Petal_width / iris_ds.Petal_length               # Formula for petal ratio
+iris_ds = iris_ds.drop(columns=["Petal_length", "Petal_width"], axis=1)           # Drop petal information from data set
+iris_ds = iris_ds.drop(columns=["Sepal_length", "Sepal_width"], axis=1)           # Drop sepal infomration from data set
+````
+
+##### Create horizontal table of statistics
+
+````python
+print(data_name)                                                                # Label for table
+print("Class\t\t\tCount\tMin\tMean\tMax\tRange\tVar\tStd Dev")                  # Create table columns
+print("-----------------------------------------------------------------------------------------")
+
+i = 0                                                   
+while i < 4:                                                                    # While i less than number of columns, starting at 0
+....
+
+ # Calculations
+ Count = iris_ds.shape[0]                                                    # Count number of rows
+ Count = int(Count)
+ Min = iris_ds.iloc[:,i].min()                                               # Identify minimum value in column
+ Mean = iris_ds.iloc[:,i].mean()                                             # Identify mean/average value in column
+ Max = iris_ds.iloc[:,i].max()                                               # Identify maximum value in column
+ Range = Max - Min                                                           # Identify difference between maximum and minimum values
+ Variance = iris_ds.iloc[:,i].var()                                          # Identify variance in column for data set
+ StdDev = iris_ds.iloc[:,i].std()                                            # Identify standard deviation in column for data set
+                
+ Min = str(Min)                                                              # Convert to string to be subscriptable
+ Mean = str(Mean)                                                            # Convert to string to be subscriptable
+ Max = str(Max)                                                              # Convert to string to be subscriptable
+ Range = str(Range)                                                          # Convert to string to be subscriptable
+ Variance = str(Variance)                                                    # Convert to string to be subscriptable
+ StdDev = str(StdDev)                                                        # Convert to string to be subscriptable
+ 
+ # Print table row be row for each column
+ print(Col_name, "\t", Count, "\t", Min[:4], "\t", Mean[:4], "\t", Max[:4], "\t", Range[:4], "\t", Variance[:4], "\t", StdDev[:4])
+ i = i + 1
+````
+
 [1]: All data in tables was returned in the Cmder command interface, and was translated into tables using the GitHub markup to produce the tables.
+[2]: The distributions are not perfectly normal, with the sepal length being a more Gaussian distribution, while the sepal width being more normal. Both distributions are somewhat right skewed.
 
 # Bibliography
 
