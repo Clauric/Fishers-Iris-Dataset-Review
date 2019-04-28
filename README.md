@@ -47,7 +47,7 @@ Google Scholar notes that Fisher’s 1936 paper has been cited 15,800 times, whi
 ## What are sepals and petals?
 As can be seen from the image below, petals and sepals are parts of the flower of the Iris. The sepals are designed to protect the reproductive parts _“within the flower bud”_, and are normally green _(Kozak & Lotocka, 2013)_. In contrast, petals are used for signalling (to pollinators) that pollen and nectar are available within the flower. As such, they are normally _“brightly coloured”_ _(ibid)_.
 
-<img align="center" width="734" height="411" src="/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg?raw=true" alt="Irises.jpg">
+<img align="center" width="734" height="411" src="/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Irises.jpg">
 
 However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals or petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
@@ -148,9 +148,48 @@ The scatter matrix shows a combination of both the scatter plots of the data poi
 
 As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and lengths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
 
+##### Data splitting
 
+Based on the issue with the data being bimodal, it is appropriate that the data should be split by iris type. Doing this will allow for more accurate data to be gathered for each iris separately. By doing this splitting, we will be left with 3 sets of data, each with the same columns, but having only 50 rows of data each.
 
+After splitting the data, and we can ascertain the following data about the individual data sets:
 
+##### Iris Setosa
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| Sepal length | 50 | 4.3 | 5.00 | 5.8 | 1.5 | 0.12 | 0.35 |
+| Sepal width |50 | 2.3 | 3.41 | 4.4 | 2.10 | 0.14 | 0.38 |
+| Petal length | 50 | 1.0 | 1.46 | 1.9 | 0.89 | 0.03 | 0.17 |
+| Petal width |50 | 0.1 | 0.24 | 0.6 | 0.5 | 0.01 | 0.10 |
+
+###### Iris Versicolor
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| Sepal length | 50 | 4.9 | 5.93 | 7.0 | 2.09 | 0.26 | 0.51 |
+| Sepal width |50 | 2.0 | 2.77 | 3.4 | 1.4 | 0.09 | 0.31 |
+| Petal length | 50 | 3.0 | 4.26 | 5.1 | 2.09 | 0.22 | 0.46 |
+| Petal width |50 | 1.0 | 1.32 | 1.8 | 0.8 | 0.03 | 0.19 |
+
+##### Iris Virginica
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| ---- | ---- | ----- | ----- | ------ | -------- | ---- | ---- |
+| Sepal length | 50 | 4.9 | 6.58 | 7.9 | 3.0 | 0.40 | 0.63 |
+| Sepal width |50 | 2.2 | 2.97 | 3.8 | 1.59 | 0.10 | 0.32 |
+| Petal length | 50 | 4.5 | 5.55 | 6.9 | 2.40 | 0.30 | 0.55 |
+| Petal width |50 | 1.4 | 2.02 | 2.5 | 1.1 | 0.07 | 0.27 |
+
+The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Virginica_ are 18.6% and 31.6% greater than the mean of _I. Setosa_ respectively. Likewise, there are large differences in mean petal lengths (191.7%, and 280.1%), and mean petal lengths (450% and 741.67%) between _I. Versicolor_ and _I. Virginica_ and _I. Setosa_). From ths we can surmise that the two clusters seen on the scatter plots are _I. Setosa_ (smaller, isolated cluster), and _I. Versicolor_ and _I. Virginica_ (larger cluster).
+
+#### Data split box and whiskers plots
+
+The box and whisker plots of the individual iris species also becomes more uniform, when compared to the entire data set, after the data is split.
+
+<p><img align="left" width="256" height="191" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIS.png" title="Box and whisker plot - I. Setosa">
+<img align="center"width="256" height="191" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVE.png" title="Box and whisker plot - I. Versicolor">
+<img align="right" width="256" height="191" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png" title="Box and whisker plot - I. Virginica"></p>
 
 
 # 3. Technical information
