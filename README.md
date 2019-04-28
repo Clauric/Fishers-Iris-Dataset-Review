@@ -149,13 +149,13 @@ Even though there is a skew in data already visible, it is important to continue
 
 The box and whisker plot, as well as the scatter matrix can be used to show the range and scope of the data found in the data set.
 
-<img align="center" width="640" height="478" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Box_Whisker_Entire_data.png">
+<p align="center"><img width="640" height="478" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Box_Whisker_Entire_data.png"></p>
 
 As can be seen from the plot of the sepal widths, there are a number of outliers (which are 150% of the interquartile range). However, 50% of the data points, around the median value, exist within a very short range. In contrast, the 50% range for the petal widths and lengths has a far larger range below the median value.
 
 The scatter matrix shows a combination of both the scatter plots of the data points plotted against each other, as well as a line grapgh showing the distribution of the data plots, when plotted against itself.
 
-<img align="center" width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_Entire_data.png">
+<p align="center"><img width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_Entire_data.png"></p>
 
 # 3. Technical information
 
