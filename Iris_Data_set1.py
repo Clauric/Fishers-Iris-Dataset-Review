@@ -95,9 +95,7 @@ if Number > 0 and Number < 5:
         print("4) Histogram plots")                                                         # Plots a histogram of the data set
         print("5) Scatter plots")                                                           # Provides a scatter plot of the data set
         print("6) Standard descriptive statistics")                                         # Provides the standard statistics created by pandas for the data set
-
-        if Number_2==2:                                                                       # Only available if the modified data set is used
-            print("7) Min, Mean,  Max, Range, Variance, and Standard Deviation")            # Provides data similar to the standard statistics, but in a table format
+        print("7) Min, Mean,  Max, Range, Variance, and Standard Deviation")                # Provides data similar to the standard statistics, but in a table format
         
         print()
         Number = int(input("Please provide a number "))
@@ -147,7 +145,7 @@ if Number > 0 and Number < 5:
             print(iris_ds.describe())
             
         # Min, Mean, Max, Range, Variance, and Standard deviation
-        elif Number == 7 and Number_2 == 2:
+        elif Number == 7:
             print()
             print(data_name)                                                                # Label for table
             print("Class\t\t\tCount\tMin\tMean\tMax\tRange\tVar\tStd Dev")                  # Create table columns
@@ -158,13 +156,25 @@ if Number > 0 and Number < 5:
                 
                 # Naming of rows
                 if i==0:
-                    Col_name = "Sepal Area (cm^2)"
+                    if Number_2==2:
+                        Col_name = "Sepal Area (cm^2)"
+                    else:
+                        Col_name = "Sepal length    "
                 elif i==1:
-                    Col_name = "Sepal Ratio     "
+                    if Number_2==2:
+                        Col_name = "Sepal Ratio     "
+                    else:
+                        Col_name = "Sepal width     "
                 elif i==2:
-                    Col_name = "Petal Area (cm^2)"
+                    if Number_2==2:
+                        Col_name = "Petal Area (cm^2)"
+                    else:
+                        Col_name = "Petal length    "
                 elif i==3:
-                    Col_name = "Petal Ratio     "
+                    if Number_2==2:
+                        Col_name = "Petal Ratio     "
+                    else:
+                        Col_name = "Petal width     "
                 
                 # Calculations
                 Count = iris_ds.shape[0]                                                    # Count number of rows
