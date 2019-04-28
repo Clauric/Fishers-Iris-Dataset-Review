@@ -1,12 +1,13 @@
 ## Table of Contents
   * [Introduction](#Introduction)
-  * [Fisher's Iris data set](#Fisher's-Iris-data-set)
-    * [What is Fisher's Iris data set?](#What-is-Fisher's-Iris-dat-set?)
-    * [Uses of fisher's Iris data set](#Used-of-fisher's-Iris-data-set)
-    * [What are sepals and petals?](#What-are-sepals-and-petals?)
-  * [Analysis and results](#Analysis-and-results)
-  * [Technical information](#Technical_information)
-  * [Bibliography](*Bibliography)
+  * [Fisher's Iris data set](#1-fishers-iris-data-set)
+    * [What is Fisher's Iris data set?](#what-is-fishers-iris-data-set)
+    * [Uses of fisher's Iris data set](#uses-of-fishers-iris-data-set)
+    * [What are sepals and petals?](#what-are-sepals-and-petals)
+  * [Analysis and results](#2-analysis-and-results)
+    * [Overall Data](#overall-data)
+  * [Technical information](#3-technical-information)
+  * [Bibliography](#bibliography)
 
 
 # Introduction
