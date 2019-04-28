@@ -34,7 +34,8 @@ The 1st section will provide a brief outline of what is Fisher’s Iris data set
 
 The data set known as Fisher’s Iris data set is a collection of measurements compiled by the researcher Edgar Anderson in 1935 _(Anderson, 1935)_. These measurements comprise 150 rows of data, with each row containing 5 data points. These data points refer to the widths and lengths of petal and sepals, as well as the identified genus of the plant. 100 of the rows of data, comprising flowers from the _Iris Setosa_ and _Iris Versicolor_ species, were collected from the Gaspé Peninsula in Quebec, Canada. Anderson noted that _"all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus"_ _(Anderson, 1936)_. This amounted to 50 rows of data per flower. Anderson’s original purpose of collecting the data was to see if _I. Versicolor_ was a result of a hybridisation event between _I. Setosa_ and _I. Virginica_, as all three plants are found in the same geographical area _(Ibid)_.
 
-![RA Fisher](RA_Sher.jpg)
+<img align="left" width="100" height="100" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/RA_FIsher.jpp/100/100">
+
 In 1936, the biologist and statistician RA Fisher conducted similar research on _I. Virginica_. This research, when added to Anderson’s original research, gave rise to the Fisher’s Iris data set (100 rows of data from Anderson, 50 from Fisher). Fisher conducted statistical analysis of the data collected to help determine if there was a method of discriminating between the flowers, based solely on the data collected (without using the names) _(Fisher, 1936)_. The data suggested that _I. Setosa_ could be so discriminated, however, there was some overlap between _I. Versicolor_, and _I. Virginica (Ibid)_.
 
 ## Uses of Fisher’s Iris data set
