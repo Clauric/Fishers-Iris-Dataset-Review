@@ -4,11 +4,12 @@
     * [What is Fisher's Iris data set?](#what-is-fishers-iris-data-set)
     * [Uses of fisher's Iris data set](#uses-of-fishers-iris-data-set)
     * [What are sepals and petals?](#what-are-sepals-and-petals)
-  * [Analysis and results](#2-analysis-and-results)
+  * [Analysis and results](#2-analysis)
     * [Overall Data](#overall-data)
-  * [Technical information](#3-technical-information)
-  * [Codes](#4-codes)
-  * [Bibliography](#5-bibliography)
+  * [Conclusion](#3-conclusion)
+  * [Technical information](#4-technical-information)
+  * [Codes](#5-codes)
+  * [Bibliography](#6-bibliography)
 
 
 # Introduction
@@ -17,18 +18,15 @@ This report is aimed at providing an understanding of “Fisher’s” Iris data
 
 1. Fisher’s Iris data set
 
-    What is Fisher’s Iris data set?
-  
-    Uses of Fisher’s Iris data set
-    
-    What are sepals and petals?
+2. Analysis
 
-2. Analysis and results
+3. Conclusion
 
-3. Technical information
+4. Technical information
 
+5. Code
 
-The 1st section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2nd section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a discussion of any issues that might arise from using this data. The last section will cover the technical information on how the accompanying Python script was used, including the Python packages required, and code used.
+The 1<sup>st</sup> section will provide a brief outline of what is Fisher’s Iris data set, including its history, as well as the current uses of the data. The 2<sup>nd</sup> section will cover some analysis undertaken, showing how the data set can be broken down and used. There will also be a review of a novel approach in how to modify the data set for further analysis. A brief conclsuion will be provided in the 3<sup>rd</sup> section  of this report. The <sup>4th</sup> section will cover the technical information on how the accompanying Python script was used, including the Python packages required. The last section will cover samples of the code which is used in the conducting the analysis (this can also be found in the accompanying [python script](https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Iris_Data_set1.py))
 
 # 1. Fisher’s Iris data set
 
@@ -52,7 +50,7 @@ As can be seen from the image below, petals and sepals are parts of the flower o
 However, Kozaks and Lotaka note that there is disagreement between botanists over whether Irises have sepals and petals. This is due to the fact that iris sepals do not meet the definition of a sepal. A number of botanists argue that, at least, some irises (of which there are around 300 _(Pacific Bulb Society, 2019)_) have neither sepals or petals, but instead tepals _(Kozak & Lotocka, 2013)_.
 That being said, for the purposes of this review, it shall be assumed that the 3 irises in question have both sepals and petals, as per the data set.
 
-# 2. Analysis and results
+# 2. Analysis
 
 ## Overall data
 The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names.
@@ -148,7 +146,7 @@ The scatter matrix shows a combination of both the scatter plots of the data poi
 
 As can be seen in the scatter plots above, there is a distinct split in the data, where the data seems to cluster in two different areas. This would suggest that there is a difference in measurements between the data for one of the irises, when compared to the other two. Additionally, the distribution graphs, show that while sepal widths and lengths seem to be normally distributed [2], the distribution of the petal widths and lengths show bimodal distribution. This further reinforces the idea that there are 2 clusters in the data.
 
-#### Data splitting
+## Data splitting
 
 Based on the issue with the data being bimodal, it is appropriate that the data should be split by iris type. Doing this will allow for more accurate data to be gathered for each iris separately. By doing this splitting, we will be left with 3 sets of data, each with the same columns, but having only 50 rows of data each.
 
@@ -181,22 +179,22 @@ After splitting the data, and we can ascertain the following data about the indi
 | Petal length | 50 | 4.5 | 5.55 | 6.9 | 2.40 | 0.30 | 0.55 |
 | Petal width |50 | 1.4 | 2.02 | 2.5 | 1.1 | 0.07 | 0.27 |
 
-The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Virginica_ are 18.6% and 31.6% greater than the mean of _I. Setosa_ respectively. Likewise, there are large differences in mean petal lengths (191.7%, and 280.1%), and mean petal lengths (450% and 741.67%) between _I. Versicolor_ and _I. Virginica_ and _I. Setosa_). From ths we can surmise that the two clusters seen on the scatter plots are _I. Setosa_ (smaller, isolated cluster), and _I. Versicolor_ and _I. Virginica_ (larger cluster).
+The data demonstrates that for the mean sepal lengths _I. Versicolor_ and _I. Virginica_ are 18.6% and 31.6% greater than the mean of _I. Setosa_ respectively. Likewise, there are large differences in mean petal lengths (191.7%, and 280.1%), and mean petal lengths (450% and 741.67%) between _I. Versicolor_ and _I. Virginica_ and _I. Setosa_) [3]. From ths we can surmise that the two clusters seen on the scatter plots are _I. Setosa_ (smaller, isolated cluster), and _I. Versicolor_ and _I. Virginica_ (larger cluster).
 
 #### Data split box and whiskers plots
 
 The box and whisker plots of the individual iris species also becomes more uniform, when compared to the entire data set, after the data is split.
 
 <p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIS.png"></p>
-<p align="center"> Box and whisker plot - _I. Setosa_</p>
+<p align="center"> Box and whisker plot - I. Setosa</p>
 
 <p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVE.png">
-<img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png" "Box and whisker plot - I. Virginica"></p>
-<p align="center"> "Box and whisker plot for _I. Versicolor_ and _I. Virginica_ respectively</p>
+<img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVI.png"></p>
+<p align="center"> "Box and whisker plot for I. Versicolor and I. Virginica respectively</p>
 
 Focusing on _I. Versicolor_ and _I. Virginica_, an examination of the box and whisker plots would suggest that _I. Virginica_ has larger petal widths and lengths, as well sepal widths. This is supported by the data data generated for the minima, mean, and maxima of both plants. There is, however, some overlap between the flowers, in terms of sepal and petal sizes, especially in the lower and middle ranges of _I. Virginica_.
 
-#### A novel approach
+## A novel approach
 
 The area of the sepals and petals have been suggested as a way of discriminating between the various species of irises in the data set (Wilkin, 2012), (Winkelman, 2014). In addition, Winkelman alos suggested that the ratio of the sepal/petal’s width to length could provide additional discrimination.
 
@@ -254,8 +252,53 @@ Additionally, the box and whisker plots and scatter matrix plots are as follows:
 
 <p align="center"><img width="600" height="600" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/Scatter_matrix_AR.png"></p>
 
-The 
-# 3. Technical information
+With the exception of the sepal area vs petal ratio scatter plots, there are two distinct clusters evident in the scatter matrix plot. Additionally, the distribution graphs show more clearly bimodal distribution, when compared to the initial data set. In fact, all 3/4 of the distribution graphs clearly show two peaks, while the sepal area distribution shows a second hump to the right of the main peak.
+
+The box and whisker plots shows that the sepal area and petal ratio are quite concentrated, while the range of the petal area is quite large. When compared to the intial data set, there half as many outliers (4 vs 2) in the derived data set.
+
+Splitting the data into the separate iris species (as previous) produces the following statistics, and box and whisker plots:
+
+##### Iris Setosa
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Sepal Area (cm<sup>2</sup>) | 50 | 10.3 | 17.2 | 25.0 | 14.7 | 8.68 | 2.94 |
+| Sepal Ratio | 50 | 0.51 | 0.68 | 0.78 | 0.27 | 0.00 | 0.05 |
+| Petal Area (cm<sup>2</sup>) | 50 | 0.11 | 0.36 | 0.96 | 0.85 | 0.03 | 0.18 |
+| Petal Ratio | 50 | 0.06 | 0.16 | 0.37 | 0.30 | 0.00 | 0.06 |
+
+##### Iris Versicolor
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Sepal Area (cm<sup>2</sup>) | 50 | 10.0 | 16.5 | 22.4 | 12.4 | 8.21 | 2.86 |
+| Sepal Ratio | 50 | 0.35 | 0.46 | 0.56 | 0.21 | 0.00 | 0.04 |
+| Petal Area (cm<sup>2</sup>) | 50 | 3.3 |  5.72 | 8.64 | 5.34 | 1.87 | 1.36 |
+| Petal Ratio | 50 | 0.24 | 0.31 | 0.37 | 0.13 | 0.00 | 0.02 |
+
+##### Iris Virginica
+
+| Class | Count | Min | Mean | Max | Range | Var | Std Dev |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Sepal Area (cm<sup>2</sup>) | 50 | 12.2 | 19.6 | 30.0 | 17.7 | 11.9 | 3.45 |
+| Sepal Ratio | 50 | 0.33 | 0.45 | 0.54 | 0.21 | 0.00 | 0.04 |
+| Petal Area (cm<sup>2</sup>) | 50 | 7.5 |  11.2 | 15.8 | 8.37 | 4.65 | 2.15 |
+| Petal Ratio | 50 | 0.25 | 0.36 | 0.47 | 0.22 | 0.00 | 0.05 |
+
+<p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWISM.png"></p>
+<p align="center"> Box and whisker plot - I. Setosa modified</p>
+
+<p align="center"><img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVEM.png">
+<img width="320" height="239" src="https://github.com/Clauric/GMIT-Programming-Scripting-Pands-Project/blob/master/BWIVIM.png"></p>
+<p align="center"> "Box and whisker plot for I. Versicolor and I. Virginica respectively modified</p>
+
+The modified data produces a slightly different results when compared to the unmodified data. The sepal area comparision shows that _I. Versicolor_ has a small area, acroos the minimum, mean, and max values, than either of the other irises. The sepal ratio is bigger (32.4%, 33.8%) for _I. Setosa_ when compared to the other irises [3]. However, when _I. Setosa_ is compared to both _I. Versicolor_ and _I. Viriginica_ across the petal area (10.9%, 3.2%), and petal ratio (48.4%, 44.4%). There is considerable overlap between _I. Versicolor_ and _I.Virginica_ in the ratios , while _I. Viriginica_ is considerably larger when measured across the the areas.
+
+# 3. Conclusion
+
+From the data, it is understandable how Fisher's Iris data set can be used to train machine learning algorithms for pattern recognition, and clustering. The analysis suggests that there the data set contains 2 separate clusters. The larger of the clusters is made up of an overlap of data points from _I. Versicolor_ and _I. Virginia_ while the smaller cluster is made up of _I. Setosa_. This is shown clearly in both the main and modified scatter matrix plot, as well as the statistics derived from splitting the data. In the larger cluster, there is less distinction between the two iris species. This is where the machine learning can be used to determine which data points refer to which iris, using a combination of pattern reconginition, data classification, and clustering.
+
+# 4. Technical information
 
 Languages and platforms used for the data analysis:
 
@@ -279,7 +322,7 @@ Languages and platforms used for the data analysis:
 
 All the codes in this repository have been tested using <a href="https://cmder.net/">Cmder</a>, with the <a href="https://www.anaconda.com/">Anaconda</a> being the default Python platform.  
 
-# 4. Codes
+# 5. Codes
 
 The following codes were used to generate the data found in the report. All the codes can be found in the python script accompanying this report.
 
@@ -397,7 +440,9 @@ while i < 4:                                                                    
 
 [2]: The distributions are not perfectly normal, with the sepal length being a more Gaussian distribution, while the sepal width being more normal. Both distributions are somewhat right skewed.
 
-# Bibliography
+[3]: All statistics calculated from mean values.
+
+# 6. Bibliography
 
 * Aggarwal, E., 2017. Pandas Python Tutorial - Learn by Examples. [Online] 
 Available at: https://www.listendata.com/2017/12/python-pandas-tutorial.html
