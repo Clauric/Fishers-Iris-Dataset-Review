@@ -48,6 +48,33 @@ That being said, for the purposes of this review, it shall be assumed that the 3
 
 # 2. Analysis and results
 
+## Overall data
+The first step in conducting any analysis on the data, it is important to ensure that the data is correct. According to the data set, there should be 150 rows of data, and 5 columns, of which 4 should be numerical values, and 1 column of names.
+In order to check this, the following scripts were run:
+
+````python
+print()
+print("Data Type")
+print(iris_ds.dtypes)
+print()
+print("Rows,", "Cols")
+print(iris_ds.shape)
+````
+This will return the following results, confirming that the data is in the format expected:
+
+| Data Type | |
+| --------- | ---------- |
+| Sepal_length | float64 |
+| Sepal_width | float64 |
+| Petal_length | float64 |
+| Petal_width | float64 |
+| Class | object |
+| dtype: object |  |
+
+
+| Rows | Cols
+| ---- | ----- |
+| 150 | 5 |
 
 # 3. Technical information
 
