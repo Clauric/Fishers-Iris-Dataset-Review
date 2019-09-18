@@ -1,4 +1,4 @@
-## Table of Contents - test 1
+## Table of Contents
   * [Introduction](#Introduction)
   * [Fisher's Iris data set](#1-fishers-iris-data-set)
     * [What is Fisher's Iris data set?](#what-is-fishers-iris-data-set)
